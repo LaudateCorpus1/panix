@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Help{% endblock %}
+
+{% block content %}
+
+
+  <form action = "{{ url_for('main_app.return_to') }}" method = "post">
+<div class="col-xs-10">
+    <h1>Help for Panix</h1>
+    <p> Panix help information</p>
+    <p>
+    <h3> Assumptions </h3>
+    <p> You have a Palo Alto Firewall on your network.</p>
+    <p> You must have credentials to modify this firewall</p>
+    <p> CSV file you want to upload MUST look like this!</p>
+    <img src="{{ url_for('static', filename='assets/spreadsheet.png') }}" width="400"  heights="90"/>
+    <ol>
+        <li>IP address of FW management interface</li>
+        <li>IP network for the subinterface...not the vlan gateway address...ends in zero!</li>
+        <li>Column "C" not used....don't ask :-)</li>
+        <li>Subnet mask bits as shown...full mask with slash followed by bits</li>
+        <li>Vlan number</li>
+        <li>Comments about the sub interface</li>
+        <li>Security Zone</li>
+    </ol>
+    <p>This app was written to bulk add Layer 3 subinterfaces to a Palo Alto firewall using the
+      pandevice python library. <p>
+      <b>Current Behavior</b><br>
+      <ul>
+        <li>You must have a separate CSV file for each firewall or one giant one that contains all the data</li>
+        <li>A multisheet excel file will not work</li>
+        <li>Upload CSV's into the mongo database</li>
+        <li>Deploy firewall subinterfaces one firewall at a time</li>
+        <li>If you have trouble logging in go to http://localhost:5001/logout</li>
+        </ul>
+
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Back to Main</button>
+
+
+  </div>
+
+</div>
+{% endblock %}

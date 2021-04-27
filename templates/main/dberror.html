@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Error{% endblock %}
+
+{% block content %}
+
+<form  method="POST" action="{{ url_for('main_app.return_to') }}">
+   <div class="jumbotron">
+    <h3>Database writting error</h3>
+    <h2> Please try again!</h2>
+    <p> Use the BACK button or go to the main screen</p>
+      {{ error }}
+      <hr>
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Back to Main</button>
+
+  </div>
+
+
+{% endblock %}

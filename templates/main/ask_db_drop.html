@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Panix Question The User's Behaviour{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+ <div class="jumbotron">
+				<h3>Are you sure you want to drop the sub interface database?</h3>
+				<p class="lead"></p>
+        </div>
+
+        <h2>{{error}}</h2>
+
+<div class="container">
+    <form action="{{ url_for('main_app.db_drop') }}" method=post>
+          <button type="submit" class="btn btn-lg btn-danger btn-block">Danger Will Robinson!</button>
+
+      </form>
+
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,3 @@
+bsn_tenant,bsn_segment,name,seq numb,action,Ip-protocol,src_cidr,dst_cidr
+RAK_test_tenant,RAK_seg_1,block_test,1,deny,1,172.20.0.0/22,172.18.0.0/22
+RAK_test_tenant,RAK_seg_2,permit_all,1,permit,,,

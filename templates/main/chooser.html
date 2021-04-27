@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Panix File Chooser{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+ <div class="jumbotron">
+				<h3>Select a CSV file to bulk upload into the database</h3>
+				<p class="lead"></p>
+        </div>
+
+        <h2>{{error}}</h2>
+
+<div class="container">
+    <form action="{{ url_for('main_app.bulk') }}" method=post enctype=multipart/form-data>
+        <p><input type=file name=file><br><br>
+           <input type=submit value=Upload>
+      </form>
+
+
+
+</div>
+{% endblock %}

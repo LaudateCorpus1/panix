@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Panix Firewall Automation{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+ <div class="jumbotron">
+				<h3>Database Dropped!</h3>
+				<p class="lead"></p>
+        </div>
+
+<div class="container">
+
+
+<div class="row">
+
+<h2>Notice!!</h2>
+
+{{ fwip }}
+
+  <p> All subinterface information has bee dropped from the database! n</p>
+  <form  method="POST" action="{{ url_for('main_app.return_to') }}">
+
+    <br>
+    <hr>
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Back to Main</button>
+
+
+</form>
+{% endblock %}

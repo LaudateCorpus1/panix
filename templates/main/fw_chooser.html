@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Panix Firewall Chooser{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+ <div class="jumbotron">
+				<h3>Select a Firewall IP to deploy subinterfaces</h3>
+				<p class="lead"></p>
+        </div>
+
+        <h2>{{error}}</h2>
+
+<div class="container">
+    <form action = "{{ url_for('main_app.deploy_interface') }}" method = "post">
+      <select name ="firewall">
+                <option value={{fire}}>'none selected'</option>
+              {% for fire in firewalls %}
+                <option value={{fire}}>{{fire}}</option>
+                {% endfor %}
+
+      </select>
+
+      <hr>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Deploy Firewall</button>
+      <br>
+      </form>
+
+
+
+</div>
+{% endblock %}

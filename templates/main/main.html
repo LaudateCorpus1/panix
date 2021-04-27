@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block title %}Welcome to Panix{% endblock %}
+
+{% block header %}<link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">{% endblock %}
+
+{% block content %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+      <div class="container">
+        <hr>
+        <h2>Bison: An application to automate Big Switch Controller functions</h2>
+        <p>API integration to Big Switch Networks BSN controller</p>
+        <form action = "/init" method = "post">
+          <hr>
+          <p>BSN IP: <input type=text  id="bsn_host" class="form-control" placeholder="10.1.1.1"  name="bsnip"></p>
+          <p>BSN User: <input type=text  id="bsn_user" class="form-control" placeholder="BSN User Id"  name="bsn_user"></p>
+          <p>BSN Password: <input type="password" id="bsn_passwd" class="form-control" placeholder="Password" required name="bsn_word"></p>
+          <button class="btn btn-primary btn-sm" type="submit">Start Application</button>
+          <input type="hidden" name=seed_ip value=''>
+          <input type="hidden" name=mask value=''>
+
+        </form>
+    </div>
+
+{% endblock %}

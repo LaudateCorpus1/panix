@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+
+{% block title %}Welcome to Panix{% endblock %}
+
+{% block header %}<link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">{% endblock %}
+
+{% block content %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+      <div class="container">
+        <hr>
+        <h2>Panix: Palo Alto Network Interface eXecutor</h2>
+        <p>Hundreds of subinterfaces?....Easy!</p>
+        <form action = "/mainx" method = "post">
+          <hr>
+          <p>Firewall IP: <input type=text  id="firewall" class="form-control" placeholder="10.1.1.1"  name="fwip"></p>
+          <p>User: <input type=text  id="user" class="form-control" placeholder="User Id"  name="username"></p>
+          <p>Password: <input type="password" id="passwd" class="form-control" placeholder="Password" required name="password"></p>
+          <hr>
+          <button class="btn btn-primary btn-sm" type="submit">Sign In</button>
+        </form>
+    </div>
+
+{% endblock %}

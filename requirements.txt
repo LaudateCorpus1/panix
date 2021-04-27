@@ -1,0 +1,7 @@
+Flask
+flask_script
+Flask-Bootstrap
+Flask_SQLAlchemy
+requests
+pandevice
+flask.mongoengine

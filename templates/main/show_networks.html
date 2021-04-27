@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Panix{% endblock %}
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <h3> Panix Networks</h3>
+    <form action = "{{ url_for('main_app.return_to') }}" method = "post">
+     <p> Networks in the Panix database
+
+    <table class="table table-responsive">
+       <thead>
+          <tr>
+             <th>Firewall IP</th>
+             <th>Network Mask</th>
+             <th>Comment</th>
+             <th>Tag</th>
+             <th>Interface IP</th>
+             <th>Zone</th>
+          </tr>
+       </thead>
+
+       <tbody>
+              {% for item in networks %}
+             <tr>
+                <td> {{ item.0 }}</td>
+                <td> {{ item.1 }} </td>
+                <td> {{ item.4 }}</td>
+                <td> {{ item.3 }} </td>
+                <td> {{ item.2 }} </td>
+                <td> {{ item.5 }} </td>
+             </tr>
+              {% endfor %}
+       </tbody>
+    </table>
+    <hr>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Back to Main</button>
+    <br>
+  </form>
+  </div>
+</div>
+{% endblock %}

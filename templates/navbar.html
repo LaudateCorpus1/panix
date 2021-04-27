@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('main_app.return_to') }}">
+                <p>Home</p>
+            </a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <div class="row">
+                <ul class="nav nav-tabs">
+
+
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Show/List</a>
+                       <span class="caret"></span></a>
+                       <ul class="dropdown-menu">
+                         <li><a href="{{ url_for('main_app.show_networks') }}">Show Networks</a></li>
+
+                       </ul>
+                  </li>
+
+
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Networks</a>
+                       <span class="caret"></span></a>
+                       <ul class="dropdown-menu">
+                         <li><a href="{{ url_for('main_app.bulk_picker') }}">Bulk Upload CSV</a></li>
+                         <li><a href="{{ url_for('main_app.sub_deploy') }}">Deploy Sub Interfaces</a></li>
+                         <li><a href="{{ url_for('main_app.ask_db_drop') }}">Drop Database</a></li>
+                       </ul>
+                  </li>
+
+
+                   <li>
+                       <a href="http://www.wookieware.com" class="navbar-link">About</a></p>
+                   </li>
+                   <li>
+                       <a href="help" class="navbar-link">Help!</a></p>
+                   </li>
+                   <li>
+                       <a href="logout" class="navbar-link">logout</a></p>
+                   </li>
+
+                </li>
+              </ul>
+            </ul>
+        </div>
+    </div>
+</nav>

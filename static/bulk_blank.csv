@@ -1,0 +1,4 @@
+bsn_tenant,bsn_segment,name,seq numb,action,Ip-protocol,src_cidr,dst_cidr
+tenant1,tenant1_segment_1,block_ping,1,deny,1,172.20.0.0/22,172.18.0.0/22
+tenant1,tenant1_segment_1,permit_all,1,permit,,,
+Note,Need to add the permit all at the EOF,,,,,,

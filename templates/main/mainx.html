@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% block title %}Welcome to Panix{% endblock %}
+
+{% block header %}<link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">{% endblock %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    {{x}}
+
+      <div class="container">
+        <h2>Panix</h2>
+        <p>Palo Alto Network Interface eXecutor</p>
+        <img src="{{ url_for('static', filename='assets/datacenter2.jpg') }}" width="600"  heights="90"/>
+
+          <h4> {{ banner }} </h4>
+
+        {{ error }}
+
+
+    </div>
+
+
+{% endblock %}
